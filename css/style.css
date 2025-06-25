@@ -136,18 +136,21 @@ main {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  column-gap: 2.5rem;
-  row-gap: 2.5rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .grid img {
   width: 100%;
   opacity: .4;
+  padding: 0.5rem;
+  border: none;
 }
 
 .grid img:hover {
   opacity: 1;
   transform: translateY(2rem);
+  border: 2px dotted black;
 }
 
 .flex {
