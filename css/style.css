@@ -1,0 +1,168 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  font-size: 125%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Custom styles */
+
+:root {
+  --text: #051511;
+  --background: #e5faf2;
+  --primary: #176d56;
+  --secondary: #6bbfe1;
+  --accent: #2564b6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+nav {
+  background-color: var(--secondary);
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav a:last-child {
+  margin-right: 2rem;
+}
+
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+.skip-to-main:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  color: var(--text);
+  text-decoration: none;
+  text-align: center;
+  outline: 2px solid var(--secondary);
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
+}
+
+.grid img {
+  width: 100%;
+  opacity: .4;
+}
+
+.grid img:hover {
+  opacity: 1;
+  transform: translateY(2rem);
+}
+
+.flex {
+  display: flex;
+  background-color: bisque;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+.flex img {
+  width: 22%;
+}
+
+.flex img:nth-child(2n) {
+  border-radius: 50%;
+}
